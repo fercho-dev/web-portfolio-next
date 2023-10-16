@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Sawarabi_Mincho, Noto_Sans_JP } from 'next/font/google'
 import { LanguageProvider } from './LanguageContext'
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 const sawarabiMincho = Sawarabi_Mincho({ weight: '400', subsets: ['latin'] })
@@ -23,6 +24,7 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   )
