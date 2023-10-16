@@ -54,13 +54,13 @@ export const projects: Project[] = [
 export const cards: CardData[] = [
   {
     id: 3,
-    imageSrc: "/contact.png",
+    imageSrc: "/contact-alt.png",
     backText: {en: "Contact", es: "Contacto", ja: "コンタクト"},
     backLink: "/contact",
   },
   {
     id: 2,
-    imageSrc: "/projects.png",
+    imageSrc: "/projects-alt.png",
     backText: {en: "Projects", es: "Proyectos", ja: "プロジェクト"},
     backLink: "/projects",
   },

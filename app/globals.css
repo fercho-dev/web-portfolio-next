@@ -63,6 +63,10 @@
   filter: grayscale(100%);
 }
 
+.homeimg {
+  filter: grayscale(100%);
+}
+
 .labelWithTooltip {
   position: relative;
   cursor: pointer;

@@ -27,7 +27,7 @@ export const CardComponent: React.FC<CardProps> = ({ imageSrc, backText, backLin
     <div className={`card w-60 h-60 mx-auto ${isFlipped ? 'is-flipped' : ''}`} onClick={onCardClick}>
       <div className={`card-inner w-full h-full`}>
         <div className="cursor-pointer card-front w-full h-full rounded">
-          <Image className='rounded' src={imageSrc} alt="Front of card" layout='fill' objectFit="cover" />
+          <Image className='homeimg rounded' src={imageSrc} alt="Front of card" layout='fill' objectFit="cover" />
         </div>
         <div className="rounded card-back w-full h-full bg-black flex items-center justify-center text-white text-3xl p-4">
           <Link className="underline" href={backLink}>
