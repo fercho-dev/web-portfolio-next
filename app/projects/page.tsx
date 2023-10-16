@@ -54,7 +54,7 @@ const ProjectsComponent: FC = () => {
       
       <div className="flex-1 flex relative overflow-hidden">
         {projects.map((project, index) => (
-          <Image key={index} className={`projectimg rounded absolute inset-0 object-cover transition-transform transition-opacity duration-500 ease-in-out transform-gpu ${previewImage === project.imageUrl ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`} src={project.imageUrl} alt={project.name} width={200} height={200} objectFit="cover" />
+          <Image key={index} className={`projectimg rounded absolute inset-0 object-cover transition-transform transition-opacity duration-500 ease-in-out transform-gpu ${previewImage === project.imageUrl ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`} src={project.imageUrl} alt={project.name} width={640} height={360} objectFit="cover" />
         ))}
       </div>
       <div className="flex-1 flex flex-col items-center justify-center relative">
