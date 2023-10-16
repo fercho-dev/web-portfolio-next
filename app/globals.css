@@ -2,26 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.card {
+  perspective: 1000px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.7s; /* Añadido para gestionar la transición de la transformación */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
 }
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute; /* Añadido para asegurar que ambos lados de la tarjeta se superponen */
+  top: 0;
+  left: 0;
+}
+
+.card-front {
+  z-index: 2;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-back p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 1s ease-in-out;
+}
+
+.preview-image {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.preview-image.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.projectimg {
+  top: calc(50% - 180px);
+  left: calc(50% - 320px);
+  filter: grayscale(100%);
+}
+
+.labelWithTooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  top: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
+  z-index: 1;
+  width: 200px;
+  white-space: pre-line;
+}
+
+.labelWithTooltip:hover .tooltip {
+  display: block;
+}
+
+.theme-checkbox {
+  @apply appearance-none cursor-pointer transition-all rounded-full relative;
+  --toggle-size: 16px;
+  width: 3.125em;
+  height: 1.5625em;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+  content: "";
+  @apply block absolute transition-all rounded-full;
+  width: 1.125em;
+  height: 1.125em;
+  top: 0.219em;
+  left: 0.219em;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
