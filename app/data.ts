@@ -74,18 +74,18 @@ export const cards: CardData[] = [
 
 export const Herotexts = {
   en: {
-    first: 'Software',
+    first: 'Web',
     second: 'Developer',
     third: 'Portfolio',
   },
   es: {
     first: 'Desarrollador',
-    second: 'de Software',
+    second: 'Web',
     third: 'Portafolio',
   },
   ja: {
-    first: 'ソフトウェア',
-    second: '開発者',
+    first: 'ウェブ',
+    second: 'デベロッパー',
     third: 'ポートフォリオ',
   }
 }
