@@ -16,10 +16,21 @@ export const projectsText = {
 
 export const projects: Project[] = [
   {
+    name: 'English Partner',
+    imageUrl: 'https://i.imgur.com/1QcdIAN.png',
+    link: 'https://english-partner.vercel.app/',
+    id: 1,
+    description: {
+      en: 'A conversational IA that helps you learn English - Next.js OpenAI API',
+      es: 'Una IA conversacional que te ayuda a aprender inglés - Next.js OpenAI API',
+      ja: '英語を学ぶのを助ける会話型AI - Next.js OpenAI API',
+    },
+  },
+  {
     name: 'QuickCurriculum',
     imageUrl: 'https://i.imgur.com/3S1hEaG.png',
     link: 'https://www.quickcurriculum.com/',
-    id: 1,
+    id: 2,
     description: {
       en: 'Create your curriculum vitae in seconds with AI - Next.js Firebase OpenAI API',
       es: 'Crea tu curriculum vitae en segundos con IA - Next.js Firebase OpenAI API',
@@ -30,7 +41,7 @@ export const projects: Project[] = [
     name: 'CSS Wiki',
     imageUrl: 'https://i.imgur.com/tTQugvX.png',
     link: 'https://www.csswiki.dev/',
-    id: 2,
+    id: 3,
     description: {
       en: 'The best resources to master CSS - Next.js MongoDB TailwindCSS',
       es: 'Los mejores recursos para dominar CSS - Next.js MongoDB TailwindCSS',
@@ -41,7 +52,7 @@ export const projects: Project[] = [
     name: 'CoinTracker',
     imageUrl: 'https://i.imgur.com/3HkW45N.png',
     link: 'https://pf-03-cointracker.vercel.app/',
-    id: 3,
+    id: 4,
     description: {
       en: 'Track your favorite cryptocurrencies - React.js Express PostgreSQL',
       es: 'Da seguimiento a tus criptomonedas favoritas - React.js Express PostgreSQL',
