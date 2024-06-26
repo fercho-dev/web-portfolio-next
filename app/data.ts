@@ -29,7 +29,7 @@ export const projects: Project[] = [
   {
     name: 'QuickCurriculum',
     imageUrl: 'https://i.imgur.com/3S1hEaG.png',
-    link: 'https://www.quickcurriculum.com/',
+    link: 'https://quickcurriculum.vercel.app/',
     id: 2,
     description: {
       en: 'Create your curriculum vitae in seconds with AI - Next.js Firebase OpenAI API',
